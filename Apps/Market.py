@@ -18,14 +18,14 @@ Items = []
 
 
 def buy():
-    path = './../Data'
+    path = './Data'
     fileName = "UserData.json"
     msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to buy, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
     print("Your buy request has been sent to server. Will be answered you in game as soon as possible. Thanks for using us! ^^")
 
 def sell():
-    path = './../Data'
+    path = './Data'
     fileName = "UserData.json"
     msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to sell, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
@@ -40,7 +40,7 @@ def close():
 ### MINOR FUNCTIONS ###
 
 def refresh():
-    path = './../Items/'
+    path = './Items/'
     gold = readGold()
     itemList.delete(0, 'end')
     Items.clear()
@@ -51,7 +51,7 @@ def refresh():
         i += 1
 
 def checkItems():
-    path = './../Items/'
+    path = './Items/'
     for r,d,f in os.walk(path):
         for file in f:
             if '.json' in file:
@@ -82,7 +82,7 @@ def readBuyValue(path, JSONname):# return the host name from json file
         return Hostname.get('buyvalue')
     
 def readGold():# return the host name from json file
-    path = '/../Data'
+    path = '/Data'
     JSONname = "GuildGoldData.json"
     filePathName = './' + path + '/' + JSONname
     with open(filePathName, 'r') as fp:
