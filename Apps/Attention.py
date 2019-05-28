@@ -14,7 +14,7 @@ main.resizable(False,False)
 mainFrame = tkinter.Frame(main, background = "gray")
 mainFrame.pack(fill = tkinter.BOTH)
 
-text = tkinter.Text(mainFrame, height = 4, width = 50, background = "gray", fg = "white")
+text = tkinter.Text(mainFrame, height = 4, width = 50, background = "gray", fg = "gold")
 text.pack()
 text.insert(tkinter.END, mystring)
 text.config(state = tkinter.DISABLED)

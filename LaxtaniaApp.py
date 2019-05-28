@@ -107,47 +107,47 @@ main.resizable(False,False)
 
 
 
-mainFrame = tkinter.Frame(main)
+mainFrame = tkinter.Frame(main, bg = "gray")
 mainFrame.pack()
 
-mainText = tkinter.Text(mainFrame, height = 10, width = 30)
+mainText = tkinter.Text(mainFrame, bg = "gray", fg = "gold", height = 10, width = 30)
 mainText.pack( side = tkinter.LEFT)
 mainText.insert(tkinter.END, mainString )
 mainText.config(state = tkinter.DISABLED)
 
-panelFrame = tkinter.Frame(mainFrame)
+panelFrame = tkinter.Frame(mainFrame, bg = "gray")
 panelFrame.pack( side = tkinter.RIGHT )
 
-sign_inFrame = tkinter.Frame(main)
+sign_inFrame = tkinter.Frame(main, bg = "gray")
 sign_inFrame.pack( side = tkinter.BOTTOM )
 
-textFrame = tkinter.Frame(sign_inFrame)
+textFrame = tkinter.Frame(sign_inFrame, bg = "gray")
 textFrame.pack( side = tkinter.LEFT )
 
-buttonFrame = tkinter.Frame(sign_inFrame)
+buttonFrame = tkinter.Frame(sign_inFrame, bg = "gray")
 buttonFrame.pack( side = tkinter.RIGHT )
 
 username = tkinter.StringVar()
 username.set("")
 
-userListButton = tkinter.Button(panelFrame, text = "Userlist", fg = "green", width = 10, height = 3, command = openUserList)
+userListButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Userlist", fg = "green", width = 10, height = 3, command = openUserList)
 userListButton.pack()
 
-marketButton = tkinter.Button(panelFrame, text = "Market",fg = "black", width = 10, height = 3, command = openMarket)
+marketButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Market",fg = "black", width = 10, height = 3, command = openMarket)
 marketButton.pack()
 
-updateButton = tkinter.Button(panelFrame, text = "Update", fg = "blue", width = 10, height = 4, command = refresh)
+updateButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Update", fg = "blue", width = 10, height = 4, command = refresh)
 updateButton.pack()
 
-userText = tkinter.Text(sign_inFrame, width = 12, height = 1)
+userText = tkinter.Text(sign_inFrame, bg = "gray", fg = "gold", width = 12, height = 1)
 userText.pack(side = tkinter.LEFT)
 userText.insert(tkinter.END, "Username:" )
 userText.config(state = tkinter.DISABLED)
 
-nameEntry = tkinter.Entry(sign_inFrame, width = 15, textvariable = username, justify = tkinter.CENTER)
+nameEntry = tkinter.Entry(sign_inFrame, bg = "gray", fg = "white", width = 15, textvariable = username, justify = tkinter.CENTER)
 nameEntry.pack(side = tkinter.RIGHT)
 
-setButton = tkinter.Button(buttonFrame, text = "SET", width = 15, height = 1, command = setData)
+setButton = tkinter.Button(buttonFrame, bg = "gray", fg = "white", text = "SET", width = 15, height = 1, command = setData)
 setButton.pack(side = tkinter.RIGHT)
 
 

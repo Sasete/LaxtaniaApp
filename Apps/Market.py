@@ -135,7 +135,7 @@ goldText.config(state = tkinter.DISABLED)
 quantity = tkinter.IntVar()
 quantity.set(0)
 
-quantityEntry = tkinter.Entry(panelFrame, width = 10, textvariable = quantity, justify = tkinter.CENTER)
+quantityEntry = tkinter.Entry(panelFrame, background = "grey", fg = "white", width = 10, textvariable = quantity, justify = tkinter.CENTER)
 quantityEntry.pack()
 
 buyButton = tkinter.Button(panelFrame, background = "grey", fg = "white", text = "BUY", width = 10, height = 2, command = buy)
