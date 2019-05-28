@@ -81,8 +81,7 @@ def refresh():
         os.remove(f)
     os.remove('./LaxtaniaApp-master/.gitignore')
     os.remove('./LaxtaniaApp-master/.gitattributes')
-    os.remove('./Log.txt')
-    shutil.move('./LaxtaniaApp-master/Log.txt','./')
+    
     os.rmdir('./LaxtaniaApp-master')
     
     os.remove('LaxtaniaApp.zip')
