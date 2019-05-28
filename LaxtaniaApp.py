@@ -1,6 +1,10 @@
 import tkinter
 from subprocess import Popen
 import json
+import urllib.request
+import zipfile
+import shutil, os, glob
+
 
 def readGold():# return the host name from json file
     path = 'Data'
@@ -35,7 +39,56 @@ def writeToJson(path, fileName, data):
     filePathNameWExt = './' + path + '/' + fileName + '.json'
     with open(filePathNameWExt, 'w') as fp:
         json.dump(data, fp)
+        
+def refresh():
+    print('File downloading from internet to refresh Data.')
+    url = 'https://github.com/Sasete/LaxtaniaApp/archive/master.zip'
+    urllib.request.urlretrieve(url, './LaxtaniaApp.zip')
+    
+    zipRef = zipfile.ZipFile('./LaxtaniaApp.zip','r')
+    zipRef.extractall()
+    filelist = glob.glob(os.path.join('./Data', "*.json"))
+    for f in filelist:
+        os.remove(f)
+    os.rmdir('./Data')
+    shutil.move('./LaxtaniaApp-master/Data','./')
 
+    filelist = glob.glob(os.path.join('./Items', "*.json"))
+    for f in filelist:
+        os.remove(f)
+    os.rmdir('./Items')
+    shutil.move('./LaxtaniaApp-master/Items','./')
+
+    filelist = glob.glob(os.path.join('./Users', "*.json"))
+    for f in filelist:
+        os.remove(f)    
+    os.rmdir('./Users')
+    shutil.move('./LaxtaniaApp-master/Users','./')
+    
+    zipRef.close()
+    
+    filelist = glob.glob(os.path.join('./LaxtaniaApp-master', "*.py"))
+    for f in filelist:
+        os.remove(f)
+    filelist = glob.glob(os.path.join('./LaxtaniaApp-master', "*.txt"))
+    for f in filelist:
+        os.remove(f)
+    os.remove('./LaxtaniaApp-master/.gitignore')
+    os.remove('./LaxtaniaApp-master/.gitattributes')
+    os.rmdir('./LaxtaniaApp-master')
+    
+    os.remove('LaxtaniaApp.zip')
+    
+def moveAllFilesinDir(srcDir, dstDir):
+    # Check if both the are directories
+    if os.path.isdir(srcDir) and os.path.isdir(dstDir) :
+        # Iterate over all the files in source directory
+        for filePath in glob.glob(srcDir + '\*'):
+            # Move each file to destination Directory
+            shutil.move(filePath, dstDir);
+    else:
+        print("srcDir & dstDir should be Directories")
+        
 main = tkinter.Tk()
 main.title("Laxtania")
 main.resizable(False,False)
@@ -82,4 +135,6 @@ nameEntry.pack(side = tkinter.RIGHT)
 setButton = tkinter.Button(buttonFrame, text = "SET", width = 15, height = 1, command = setData)
 setButton.pack(side = tkinter.RIGHT)
 
+
+refresh()
 tkinter.mainloop()

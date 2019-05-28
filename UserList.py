@@ -19,6 +19,7 @@ def refresh():
     while i  < len(Users):
         userList.insert(0,(str(readUsername(path,str(Users[i]))) + "  :         Trust:   " + str(readTrust(path,str(Users[i])))))
         i += 1
+    print('Userlist has been refreshed.')
    
 
 
