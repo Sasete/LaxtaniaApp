@@ -130,13 +130,13 @@ buttonFrame.pack( side = tkinter.RIGHT )
 username = tkinter.StringVar()
 username.set("")
 
-userListButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Userlist", fg = "green", width = 10, height = 3, command = openUserList)
+userListButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Userlist", width = 10, height = 3, command = openUserList)
 userListButton.pack()
 
-marketButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Market",fg = "black", width = 10, height = 3, command = openMarket)
+marketButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Market", width = 10, height = 3, command = openMarket)
 marketButton.pack()
 
-updateButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Update", fg = "blue", width = 10, height = 4, command = refresh)
+updateButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Update", width = 10, height = 4, command = refresh)
 updateButton.pack()
 
 userText = tkinter.Text(sign_inFrame, bg = "gray", fg = "gold", width = 12, height = 1)
