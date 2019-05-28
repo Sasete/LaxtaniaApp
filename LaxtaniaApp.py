@@ -81,7 +81,6 @@ def refresh():
     filelist = glob.glob(os.path.join('./LaxtaniaApp-master', "*.txt"))
     for f in filelist:
         os.remove(f)
-    os.remove('./LaxtaniaApp-master/LaxtaniaApp.exe')
     os.remove('./LaxtaniaApp-master/.gitignore')
     os.remove('./LaxtaniaApp-master/.gitattributes')
 
