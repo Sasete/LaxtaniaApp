@@ -49,7 +49,7 @@ def refresh():
     i = 0
     checkItems()
     while i  < len(Items):
-        itemList.insert(0,(str(readName(path,str(Items[i]))) + '; Buy:' + str(readBuyValue(path,str(Items[i]))) + ' silver')+ ' Sell:' + str(readSellValue(path,str(Items[i]))) + ' silver')
+        itemList.insert(0,(str(readName(path,str(Items[i]))) + ' Buy:' + str(readBuyValue(path,str(Items[i]))) + 's ')+ ' Sell:' + str(readSellValue(path,str(Items[i]))) + 's' + '   Amount: ' + str(readAmount(path,str(Items[i]))))
         i += 1
 
 def checkItems():
@@ -76,6 +76,12 @@ def readSellValue(path, JSONname):# return the host name from json file
     with open(filePathName, 'r') as fp:
         Hostname = json.load(fp)
         return Hostname.get('sellvalue')
+
+def readAmount(path, JSONname):# return the host name from json file
+    filePathName = './' + path + '/' + JSONname
+    with open(filePathName, 'r') as fp:
+        Hostname = json.load(fp)
+        return Hostname.get('amount')
 
 def readBuyValue(path, JSONname):# return the host name from json file
     filePathName = './' + path + '/' + JSONname
