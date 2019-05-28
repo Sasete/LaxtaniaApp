@@ -20,7 +20,7 @@ text.insert(tkinter.END, mystring)
 text.config(state = tkinter.DISABLED)
 
 
-button = tkinter.Button(mainFrame, text = "Okay", width = 10, height = 2, background = "gray", fg = "darkred")
+button = tkinter.Button(mainFrame, text = "Okay", width = 10, height = 2, background = "gray", fg = "darkred", command = close)
 button.pack()
 
 tkinter.mainloop()
