@@ -18,7 +18,7 @@ Items = []
 
 
 def buy():
-    path = '/../Data'
+    path = './../Data'
     fileName = "UserData.json"
     msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to buy, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
@@ -82,7 +82,7 @@ def readBuyValue(path, JSONname):# return the host name from json file
         return Hostname.get('buyvalue')
     
 def readGold():# return the host name from json file
-    path = '../Data'
+    path = '/../Data'
     JSONname = "GuildGoldData.json"
     filePathName = './' + path + '/' + JSONname
     with open(filePathName, 'r') as fp:

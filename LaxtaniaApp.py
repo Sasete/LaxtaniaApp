@@ -4,6 +4,7 @@ import json
 import urllib.request
 import zipfile
 import shutil, os, glob
+import subprocess
 
 
 def readGold():# return the host name from json file
@@ -20,11 +21,11 @@ mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n
 
 
 def openUserList():
-    Popen('Python UserList.py','./Apps')
+    Popen('Python ./Apps/UserList.py')
     
 
 def openMarket():
-    Popen('Python Market.py','./Apps')
+    Popen('Python ./Apps/Market.py')
     
 def setData():
     username = nameEntry.get()
