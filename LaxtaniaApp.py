@@ -20,11 +20,11 @@ mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n
 
 
 def openUserList():
-    Popen('Python UserList.py')
+    Popen('Python UserList.py','./Apps')
     
 
 def openMarket():
-    Popen('Python Market.py')
+    Popen('Python Market.py','./Apps')
     
 def setData():
     username = nameEntry.get()
@@ -41,7 +41,7 @@ def writeToJson(path, fileName, data):
         json.dump(data, fp)
         
 def refresh():
-    print('File downloading from internet to refresh Data.')
+    print('File downloading from internet to update Data.')
     url = 'https://github.com/Sasete/LaxtaniaApp/archive/master.zip'
     urllib.request.urlretrieve(url, './LaxtaniaApp.zip')
     
@@ -65,6 +65,10 @@ def refresh():
     os.rmdir('./Users')
     shutil.move('./LaxtaniaApp-master/Users','./')
     
+    filelist = glob.glob(os.path.join('./LaxtaniaApp/Apps', "*.py"))
+    for f in filelist:
+        os.remove(f)
+    os.rmdir('./LaxtaniaApp-master/Apps')
     zipRef.close()
     
     filelist = glob.glob(os.path.join('./LaxtaniaApp-master', "*.py"))
@@ -78,6 +82,7 @@ def refresh():
     os.rmdir('./LaxtaniaApp-master')
     
     os.remove('LaxtaniaApp.zip')
+    print('Updated succesfully!')
     
 def moveAllFilesinDir(srcDir, dstDir):
     # Check if both the are directories
@@ -118,11 +123,14 @@ buttonFrame.pack( side = tkinter.RIGHT )
 username = tkinter.StringVar()
 username.set("")
 
-userListButton = tkinter.Button(panelFrame, text = "Userlist", fg = "green", width = 10, height = 5, command = openUserList)
-userListButton.pack(side = tkinter.TOP)
+userListButton = tkinter.Button(panelFrame, text = "Userlist", fg = "green", width = 10, height = 3, command = openUserList)
+userListButton.pack()
 
-marketButton = tkinter.Button(panelFrame, text = "Market",fg = "black", width = 10, height = 5, command = openMarket)
-marketButton.pack(side = tkinter.BOTTOM)
+marketButton = tkinter.Button(panelFrame, text = "Market",fg = "black", width = 10, height = 3, command = openMarket)
+marketButton.pack()
+
+updateButton = tkinter.Button(panelFrame, text = "Update", fg = "blue", width = 10, height = 4, command = refresh)
+updateButton.pack()
 
 userText = tkinter.Text(sign_inFrame, width = 12, height = 1)
 userText.pack(side = tkinter.LEFT)
