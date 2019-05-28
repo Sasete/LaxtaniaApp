@@ -110,7 +110,7 @@ main.resizable(False,False)
 mainFrame = tkinter.Frame(main, bg = "gray")
 mainFrame.pack()
 
-mainText = tkinter.Text(mainFrame, bg = "gray", fg = "gold", height = 10, width = 30)
+mainText = tkinter.Text(mainFrame, bg = "gray", fg = "gold", height = 12, width = 30)
 mainText.pack( side = tkinter.LEFT)
 mainText.insert(tkinter.END, mainString )
 mainText.config(state = tkinter.DISABLED)
@@ -119,7 +119,7 @@ panelFrame = tkinter.Frame(mainFrame, bg = "gray")
 panelFrame.pack( side = tkinter.RIGHT )
 
 sign_inFrame = tkinter.Frame(main, bg = "gray")
-sign_inFrame.pack( side = tkinter.BOTTOM )
+sign_inFrame.pack( side = tkinter.BOTTOM , fill = tkinter.X)
 
 textFrame = tkinter.Frame(sign_inFrame, bg = "gray")
 textFrame.pack( side = tkinter.LEFT )
