@@ -136,7 +136,7 @@ userListButton.pack()
 marketButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Market", width = 10, height = 3, command = openMarket)
 marketButton.pack()
 
-updateButton = tkinter.Button(panelFrame, bg = "gray", fg = "white", text = "Update", width = 10, height = 4, command = refresh)
+updateButton = tkinter.Button(panelFrame, bg = "gray", fg = "blue", text = "Update", width = 10, height = 4, command = refresh)
 updateButton.pack()
 
 userText = tkinter.Text(sign_inFrame, bg = "gray", fg = "gold", width = 12, height = 1)
@@ -147,7 +147,7 @@ userText.config(state = tkinter.DISABLED)
 nameEntry = tkinter.Entry(sign_inFrame, bg = "gray", fg = "white", width = 15, textvariable = username, justify = tkinter.CENTER)
 nameEntry.pack(side = tkinter.RIGHT)
 
-setButton = tkinter.Button(buttonFrame, bg = "gray", fg = "white", text = "SET", width = 15, height = 1, command = setData)
+setButton = tkinter.Button(buttonFrame, bg = "gray", fg = "gold", text = "SET", width = 15, height = 1, command = setData)
 setButton.pack(side = tkinter.RIGHT)
 
 
