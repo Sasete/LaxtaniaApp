@@ -113,20 +113,20 @@ main = tkinter.Tk()
 main.title("Market")
 main.resizable(False,False)
 
-listFrame = tkinter.Frame(main)
+listFrame = tkinter.Frame(main, background = "grey")
 listFrame.pack()
 
-scrollbar = tkinter.Scrollbar(listFrame)
+scrollbar = tkinter.Scrollbar(listFrame,  background = "grey")
 scrollbar.pack(side = tkinter.LEFT, fill = tkinter.Y)
 
-itemList = tkinter.Listbox(listFrame, height = 20, width = 60, yscrollcommand = scrollbar.set)
+itemList = tkinter.Listbox(listFrame, background = "grey", fg = "gold", height = 20, width = 60, yscrollcommand = scrollbar.set)
 itemList.pack(side = tkinter.LEFT)
 
 
-panelFrame = tkinter.Frame(listFrame)
+panelFrame = tkinter.Frame(listFrame, background = "grey")
 panelFrame.pack(side = tkinter.RIGHT)
 
-goldText = tkinter.Text(panelFrame, height = 3, width = 10)
+goldText = tkinter.Text(panelFrame, height = 3, width = 10,  background = "grey", fg = "white")
 goldText.pack( side = tkinter.TOP)
 goldText.insert(tkinter.END, goldString )
 goldText.config(state = tkinter.DISABLED)
@@ -138,14 +138,14 @@ quantity.set(0)
 quantityEntry = tkinter.Entry(panelFrame, width = 10, textvariable = quantity, justify = tkinter.CENTER)
 quantityEntry.pack()
 
-buyButton = tkinter.Button(panelFrame, text = "BUY", width = 10, height = 2, command = buy)
+buyButton = tkinter.Button(panelFrame, background = "grey", fg = "white", text = "BUY", width = 10, height = 2, command = buy)
 buyButton.pack()
 
-sellButton = tkinter.Button(panelFrame, text = "SELL", width = 10, height = 2, command = sell)
+sellButton = tkinter.Button(panelFrame, background = "grey", fg = "white", text = "SELL", width = 10, height = 2, command = sell)
 sellButton.pack()
 
 
-closeButton = tkinter.Button(panelFrame, text = "Close", width = 10, height = 2, command = close)
+closeButton = tkinter.Button(panelFrame, background = "grey", fg = "white", text = "Close", width = 10, height = 2, command = close)
 closeButton.pack()
 
 

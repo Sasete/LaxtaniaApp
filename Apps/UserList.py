@@ -68,13 +68,13 @@ main.title("Userlist")
 main.resizable(False,False)
 
 
-listFrame = tkinter.Frame(main)
+listFrame = tkinter.Frame(main, background = "grey")
 listFrame.pack()
 
-scrollbar = tkinter.Scrollbar(listFrame)
+scrollbar = tkinter.Scrollbar(listFrame, background = "grey")
 scrollbar.pack(side = tkinter.LEFT, fill = tkinter.Y)
 
-userList = tkinter.Listbox(listFrame, height = 20, width = 40, yscrollcommand = scrollbar.set)
+userList = tkinter.Listbox(listFrame,background = "grey",fg = "gold", height = 20, width = 40, yscrollcommand = scrollbar.set)
 userList.pack(side = tkinter.LEFT)
 
 panelFrame = tkinter.Frame(listFrame)
@@ -87,10 +87,10 @@ trustPoint = tkinter.IntVar()
 trustPoint.set(0)
 
 
-refreshButton = tkinter.Button(panelFrame, text = "Refresh", width = 10, height = 2, command = refresh)
+refreshButton = tkinter.Button(panelFrame, background = "grey", fg = "white", text = "Refresh", width = 10, height = 2, command = refresh)
 refreshButton.pack()
 
-closeButton = tkinter.Button(panelFrame, text = "Close", width = 10, height = 2, command = close)
+closeButton = tkinter.Button(panelFrame, background = "grey", fg = "white", text = "Close", width = 10, height = 2, command = close)
 closeButton.pack()
 
 ### INTERFACE ###
