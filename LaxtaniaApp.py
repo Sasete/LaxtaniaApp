@@ -65,10 +65,11 @@ def refresh():
     os.rmdir('./Users')
     shutil.move('./LaxtaniaApp-master/Users','./')
     
-    filelist = glob.glob(os.path.join('./LaxtaniaApp/Apps', "*.py"))
+    filelist = glob.glob(os.path.join('./Apps', "*.py"))
     for f in filelist:
         os.remove(f)
-    os.rmdir('./LaxtaniaApp-master/Apps')
+    os.rmdir('./Apps')
+    shutil.move('./LaxtaniaApp-master/Apps','./')
     zipRef.close()
     
     filelist = glob.glob(os.path.join('./LaxtaniaApp-master', "*.py"))
