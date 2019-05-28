@@ -11,7 +11,7 @@ Users = []
 
 
 def refresh():
-    path = './Users/'
+    path = './../Users/'
     userList.delete(0, 'end')
     Users.clear()
     i = 0
@@ -35,7 +35,7 @@ def close():
 
 
 def checkUsers():
-    path = './Users/'
+    path = './../Users/'
     for r,d,f in os.walk(path):
         for file in f:
             if '.json' in file:

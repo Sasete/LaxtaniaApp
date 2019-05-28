@@ -18,14 +18,14 @@ Items = []
 
 
 def buy():
-    path = 'Data'
+    path = '/../Data'
     fileName = "UserData.json"
     msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to buy, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
     print("Your buy request has been sent to server. Will be answered you in game as soon as possible. Thanks for using us! ^^")
 
 def sell():
-    path = './Data'
+    path = './../Data'
     fileName = "UserData.json"
     msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to sell, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
@@ -40,18 +40,18 @@ def close():
 ### MINOR FUNCTIONS ###
 
 def refresh():
-    path = './Items/'
+    path = './../Items/'
     gold = readGold()
     itemList.delete(0, 'end')
     Items.clear()
     i = 0
     checkItems()
     while i  < len(Items):
-        itemList.insert(0,(str(readName(path,str(Items[i]))) + '  :         ' + str(readValue(path,str(Items[i]))) + ' silver'))
+        itemList.insert(0,(str(readName(path,str(Items[i]))) + '; Buy:' + str(readBuyValue(path,str(Items[i]))) + ' silver')+ ' Sell:' + str(readSellValue(path,str(Items[i]))) + ' silver')
         i += 1
 
 def checkItems():
-    path = './Items/'
+    path = './../Items/'
     for r,d,f in os.walk(path):
         for file in f:
             if '.json' in file:
@@ -69,14 +69,20 @@ def readUsername(path, JSONname):# return the host name from json file
         Hostname = json.load(fp)
         return Hostname.get('username')
     
-def readValue(path, JSONname):# return the host name from json file
+def readSellValue(path, JSONname):# return the host name from json file
     filePathName = './' + path + '/' + JSONname
     with open(filePathName, 'r') as fp:
         Hostname = json.load(fp)
-        return Hostname.get('value')
+        return Hostname.get('sellvalue')
+
+def readBuyValue(path, JSONname):# return the host name from json file
+    filePathName = './' + path + '/' + JSONname
+    with open(filePathName, 'r') as fp:
+        Hostname = json.load(fp)
+        return Hostname.get('buyvalue')
     
 def readGold():# return the host name from json file
-    path = 'Data'
+    path = '../Data'
     JSONname = "GuildGoldData.json"
     filePathName = './' + path + '/' + JSONname
     with open(filePathName, 'r') as fp:
@@ -105,7 +111,7 @@ listFrame.pack()
 scrollbar = tkinter.Scrollbar(listFrame)
 scrollbar.pack(side = tkinter.LEFT, fill = tkinter.Y)
 
-itemList = tkinter.Listbox(listFrame, height = 20, width = 40, yscrollcommand = scrollbar.set)
+itemList = tkinter.Listbox(listFrame, height = 20, width = 60, yscrollcommand = scrollbar.set)
 itemList.pack(side = tkinter.LEFT)
 
 
