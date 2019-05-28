@@ -29,6 +29,7 @@ def setData():
     newData = {}
     newData['username'] = username
     writeToJson(path, fileName, newData)
+    print("Username set as," + str(username))
 
 def writeToJson(path, fileName, data):
     filePathNameWExt = './' + path + '/' + fileName + '.json'
