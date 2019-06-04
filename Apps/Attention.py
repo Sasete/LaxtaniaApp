@@ -1,7 +1,7 @@
 import tkinter
 
 
-mystring = 'Your request has been sent to server. Please be \nsure to send your resources(gather result if your resource is labor) or golds to Sassii in game.'
+mystring = 'Your request has been sent to server. Please be \nsure to send your resources(gather result if your resource is labor) or golds to Sasyy in game.'
 
 def close():
     main.quit()
