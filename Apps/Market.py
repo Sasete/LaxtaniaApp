@@ -20,17 +20,17 @@ Items = []
 def buy():
     path = './Data'
     fileName = "UserData.json"
-    msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to buy, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
+    msg = ("Hello! I'm; " + str(readUsername(path,fileName)) + ". I want to buy; " + str(itemList.get(tkinter.ACTIVE)) + " x " + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
-    print("Your buy request has been sent to server. Will be answered you in game as soon as possible. Thanks for using us! ^^")
+    print("Your buy request has been sent to server. Will be answered you in game as soon as possible. ")
     Popen('Python ./Apps/Attention.py')
     
 def sell():
     path = './Data'
     fileName = "UserData.json"
-    msg = ("Hello! I'm, " + str(readUsername(path,fileName)) + " I want to sell, " + str(itemList.get(tkinter.ACTIVE)) + "x" + str(quantityEntry.get()))
+    msg = ("Hello! I'm; " + str(readUsername(path,fileName)) + ". I want to sell; " + str(itemList.get(tkinter.ACTIVE)) + " x " + str(quantityEntry.get()))
     server.sendmail("laxialaxtania@gmail.com","SaseteS@icloud.com",msg)
-    print("Your sell request has been sent to server. Will be answered you in game as soon as possible. Thanks for using us! ^^")
+    print("Your sell request has been sent to server. Will be answered you in game as soon as possible. ")
     Popen('Python ./Apps/Attention.py')
     
 def close():

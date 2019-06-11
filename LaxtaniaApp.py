@@ -128,7 +128,7 @@ buttonFrame = tkinter.Frame(sign_inFrame, bg = "gray")
 buttonFrame.pack( side = tkinter.RIGHT )
 
 username = tkinter.StringVar()
-username.set("")
+username.set("Username here...")
 
 userListButton = tkinter.Button(panelFrame, bg = "gray", fg = "darkred", text = "Userlist", width = 10, height = 3, command = openUserList)
 userListButton.pack()
