@@ -17,7 +17,7 @@ def readGold():# return the host name from json file
 
 gold = readGold()
 
-mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t     Silver: " + str(gold) +"\n\t Protector: Sasyy \n\nv1.16"
+mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t     Silver: " + str(gold) +"\n\t Protector: Sasyy \n\\n\n\n\nv1.16"
 
 
 def openUserList():
