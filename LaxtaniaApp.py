@@ -15,9 +15,17 @@ def readGold():# return the host name from json file
         Hostname = json.load(fp)
         return Hostname.get('gold')
 
-gold = readGold()
+def readValue():# return the host name from json file
+    path = 'LaxtaniaApp/Data'
+    JSONname = "GuildGoldData.json"
+    filePathName = './' + path + '/' + JSONname
+    with open(filePathName, 'r') as fp:
+        Hostname = json.load(fp)
+        return Hostname.get('value')
 
-mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t     Silver: " + str(gold) +"\n\t Protector: Sasyy \n\n\n\nv1.16"
+gold = readValue()
+
+mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t     Value: " + str(gold) +"\n\t Protector: Sasyy \n\n\n\nv1.17"
 
 
 def openUserList():

@@ -3,3 +3,12 @@ Gold set 13250 by, Username here...: 100 Fabric has been bought ~ 3:36:53 , 11:6
 Gold set 11900 by, Username here...: Enter a description here... ~ 5:24:24 , 11:6:2019
 Gold set 11900 by, Username here...: 300 Bait Worm bought. ~ 5:25:8 , 11:6:2019
 Gold set 13800 by, Sasyy: 100 Fabric sold ~ 17:1:58 , 11:6:2019
+Gold set 11900 by, Sasyy: 100 Fabric bought ~ 15:40:28 , 12:6:2019
+Gold set 12050 by, Sasyy: Wrong Calculation Fix ~ 15:41:40 , 12:6:2019
+Value set 15600 by, Sasyy: Enter a description here... ~ 15:49:55 , 12:6:2019
+Gold set 15600 by, Sasyy: Enter a description here... ~ 15:51:7 , 12:6:2019
+Gold set 12050 by, Sasyy: Trying for adding Value ~ 15:51:55 , 12:6:2019
+Gold set 15600 by, Sasyy: Enter a description here... ~ 15:52:24 , 12:6:2019
+Value set 15600 by, Sasyy: Enter a description here... ~ 15:53:40 , 12:6:2019
+Value set 15600 by, Username here...: Enter a description here... ~ 15:54:35 , 12:6:2019
+Value set 15600 by, Sasyy: Enter a description here... ~ 15:56:0 , 12:6:2019
