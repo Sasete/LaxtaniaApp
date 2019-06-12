@@ -15,3 +15,4 @@ Value set 15600 by, Sasyy: Enter a description here... ~ 15:56:0 , 12:6:2019
 Value set 8550 by, Sasyy: 1000 Chopped Produce bought ~ 16:11:39 , 12:6:2019
 Gold set 8550 by, Sasyy: 1000x Chopped Produce bought ~ 16:12:1 , 12:6:2019
 Value set 16100 by, Sasyy: 1000x Chopped Produce Bought Previously one was wrong calculation ~ 16:14:44 , 12:6:2019
+Gold set 10450 by, Sasyy: 100x Fabric sold ~ 16:16:50 , 12:6:2019
