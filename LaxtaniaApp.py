@@ -16,7 +16,7 @@ def readGold():# return the host name from json file
         return Hostname.get('gold')
 
 def readValue():# return the host name from json file
-    path = 'LaxtaniaApp/Data'
+    path = 'Data'
     JSONname = "GuildGoldData.json"
     filePathName = './' + path + '/' + JSONname
     with open(filePathName, 'r') as fp:
