@@ -25,7 +25,18 @@ def readValue():# return the host name from json file
 
 gold = readValue()
 
-mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t     Value: " + str(gold) +"\n\t Protector: Sasyy \n\n\n\nv1.17"
+version = 'v1.17'
+
+mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t     Value: " + str(gold) + "\n\t Protector: Sasyy \n\n\n\n" + version
+
+    
+def refreshUI():
+    gold = readValue()
+    mainText.config(state = tkinter.NORMAL)
+    mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t  Value: " + str(gold) +"\n\t Leader: Sasyy \n\n\n" + version
+    mainText.delete(1.0, tkinter.END)
+    mainText.insert(tkinter.END, mainString )
+    mainText.config(state = tkinter.DISABLED)
 
 
 def openUserList():
@@ -97,6 +108,9 @@ def refresh():
     os.rmdir('./LaxtaniaApp-master')
     
     os.remove('LaxtaniaApp.zip')
+
+    refreshUI()
+    
     print('Updated succesfully!')
     
 def moveAllFilesinDir(srcDir, dstDir):

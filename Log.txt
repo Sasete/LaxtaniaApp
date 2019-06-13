@@ -18,3 +18,7 @@ Value set 16100 by, Sasyy: 1000x Chopped Produce Bought Previously one was wrong
 Gold set 10450 by, Sasyy: 100x Fabric sold ~ 16:16:50 , 12:6:2019
 Gold set 8700 by, Sasyy: 100 Fabric bought ~ 15:12:29 , 13:6:2019
 Value set 16250 by, Sasyy: 100 Fabric bought ~ 15:14:15 , 13:6:2019
+Gold set 0 by, Sasyy: Deneme ~ 15:42:59 , 13:6:2019
+Value set 16200 by, Sasyy: deneme ~ 15:43:11 , 13:6:2019
+Value set 16250 by, Sasyy: deneme ~ 15:43:23 , 13:6:2019
+Gold set 8700 by, Sasyy: v1.17 update button fixed trying to push over our app ~ 15:45:38 , 13:6:2019
