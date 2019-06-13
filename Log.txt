@@ -23,3 +23,4 @@ Value set 16200 by, Sasyy: deneme ~ 15:43:11 , 13:6:2019
 Value set 16250 by, Sasyy: deneme ~ 15:43:23 , 13:6:2019
 Gold set 8700 by, Sasyy: v1.17 update button fixed trying to push over our app ~ 15:45:38 , 13:6:2019
 Value set 16200 by, Sasyy: Trying new update button ~ 15:48:53 , 13:6:2019
+Value set 16250 by, Sasyy: Update button still doesn't work :( ~ 15:51:48 , 13:6:2019
