@@ -33,7 +33,7 @@ mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n
 def refreshUI():
     gold = readValue()
     mainText.config(state = tkinter.NORMAL)
-    mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t  Value: " + str(gold) +"\n\t Leader: Sasyy \n\n\n" + version
+    mainString = "\n\n\t    Welcome \n       to application of \n\tLaxtania Guild!\n\t  Value: " + str(gold) +"\n\t Leader: Sasyy \n\n\n\n" + version
     mainText.delete(1.0, tkinter.END)
     mainText.insert(tkinter.END, mainString )
     mainText.config(state = tkinter.DISABLED)
