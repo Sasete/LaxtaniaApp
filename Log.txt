@@ -32,3 +32,5 @@ Gold set 3600 by, Sasyy: 100 Fabric sold ~ 14:10:58 , 15:6:2019
 Gold set 7400 by, Sasyy: 200 Fabric sold ~ 14:12:56 , 15:6:2019
 Value set 18086 by, Sasyy: 336 Iron Ore bought ~ 2:56:44 , 16:6:2019
 Gold set 4376 by, Sasyy: 336 Iron Ore bought ~ 2:57:37 , 16:6:2019
+Value set 18186 by, Sasyy: 200 Ground Grain bought ~ 3:0:41 , 16:6:2019
+Gold set 3576 by, Sasyy: 200 Ground Grain bought ~ 3:1:12 , 16:6:2019
